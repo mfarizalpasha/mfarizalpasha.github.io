@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
+     <!-- AOS -->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="icon" href="img/logo-ieee.png">
     <link rel="stylesheet" href="style.css"/>
@@ -46,14 +49,14 @@
     <section class="jumbotron text-center">
         <img src="img/fariz.jpg" alt="Muhammad Fariz Al-Pasha" width="150" class="rounded-circle img-thumbnail"/>
         <h1 class="display-4">Muhammad Fariz Al-Pasha</h1>
-        <p class="lead">Undergraduate Information Engineering from Gadjah Mada University</p>
+        <p class="lead"></p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L34.3,165.3C68.6,171,137,181,206,160C274.3,139,343,85,411,90.7C480,96,549,160,617,192C685.7,224,754,224,823,234.7C891.4,245,960,267,1029,266.7C1097.1,267,1166,245,1234,224C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
     </section>
     <!-- Akhir Jumbotron -->
 
     <!-- About -->
     <section id="about" class="about text-center" id="">
-        <div class="container">
+        <div class="container" data-aos="fade-down" data-aos-duration="2000">
             <div class="row">
                 <div class="col">
                     
@@ -87,7 +90,7 @@
           <div class="row">
           </div>
           <div class="row">
-            <div class="col-md-4 mb-3">
+            <div class="col-md-2 mb-3" data-aos="flip-left" data-aos-duration="2000">
               <div class="card">
                 <img src="img/logo-bootstrap.png" class="card-img-top" alt="Logo Bootstrap">
                 <div class="card-body">
@@ -95,19 +98,43 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-3">
+            <div class="col-md-2 mb-3" data-aos="flip-left" data-aos-duration="2000">
               <div class="card">
                 <img src="img/logo-html.png" class="card-img-top" alt="Logo HTML">
                 <div class="card-body">
-                  <p class="card-text">I using HTML5 because it is the new version of HTML and foundation of web development</p>
+                  <p class="card-text">I using HTML5 because it is the update version of HTML and to make structure from make this portofolio website</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-3">
+            <div class="col-md-2 mb-3" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="800">
               <div class="card">
                 <img src="img/logo-css.png" width="100" class="card-img-top" alt="Logo CSS">
                 <div class="card-body">
-                  <p class="card-text">I also using CSS3 because CSS3 is foundation of web development</p>
+                  <p class="card-text">I also using CSS3 because CSS3 make this website more colorful and look great</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 mb-3" data-aos="flip-down" data-aos-duration="2000" data-aos-delay="800">
+              <div class="card">
+                <img src="img/logo-getwaves.png" class="card-img-top" alt="Logo getwaves">
+                <div class="card-body">
+                  <p class="card-text">I using getwaves to make wave on the website</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 mb-3" data-aos="flip-right" data-aos-duration="2000" data-aos-delay="500">
+              <div class="card">
+                <img src="img/logo-aos.png" class="card-img-top" alt="Logo aos">
+                <div class="card-body">
+                  <p class="card-text">AOS is for make little animation at text and card when open about me and portofolio</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 mb-3" data-aos="flip-right" data-aos-duration="2000" data-aos-delay="500">
+              <div class="card">
+                <img src="img/logo-gsap.png" class="card-img-top" alt="Logo gsap">
+                <div class="card-body">
+                  <p class="card-text">GSAP is use for make animation at navbar, my photo, and text below that</p>
                 </div>
               </div>
             </div>
@@ -145,6 +172,27 @@
       <p><h5>Created by <a href="https://github.com/mfarizalpasha" target="_blank" class="text-white fw-bold">Muhammad Fariz Al-Pasha</a></h5></p>
     </footer>
     <!-- Akhir Footer -->
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once :true
+    });
+  </script>
+  <!-- Akhir AOS -->
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+  <script>
+    gsap.registerPlugin(TextPlugin);
+    gsap.to('.lead', {duration : 6, delay : 3, text: 'Undergraduate Information Engineering from Gadjah Mada University'})
+    gsap.from('.jumbotron img', {duration : 3, rotateY:540, opacity: 0})
+    gsap.from('.navbar', {duration :1.5, y:'-100%', opacity: 0, ease : 'bounce'})
+    gsap.from('.display-4', {duration :3, x:'-50%', opacity: 0, delay : 1, ease : 'elastic'})
+  </script>
+  <!-- Akhir GSAP -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   </body>
